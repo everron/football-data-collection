@@ -6,9 +6,9 @@ Created on Jul 2, 2016
 import os
 import re 
 
-playersFileDirectory = '/Users/hugomathien/Documents/workspace/footballdata/players/'
-allPlayersFile = '/Users/hugomathien/Documents/workspace/footballdata/players_list/1_players_list_all.txt'
-output = '/Users/hugomathien/Documents/workspace/footballdata/players_list/6_players_list_all.txt'
+playersFileDirectory = '/home/knut/code/git/python-football-data-collection/footballData//players/'
+allPlayersFile = '/home/knut/code/git/python-football-data-collection/footballData/1_players_list_all.txt'
+output = '/home/knut/code/git/python-football-data-collection/footballData/6_players_list_all.txt'
 count = 0
 allPayersFile = set()
 allPlayers = set()
