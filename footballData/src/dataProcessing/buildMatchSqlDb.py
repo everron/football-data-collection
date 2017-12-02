@@ -92,16 +92,16 @@ def saveMatch(dirname,filename,count):
     try:
         lstHomePlayerX = parsedXML.findall('homePlayersX/value') 
         lstHomePlayerY = parsedXML.findall('homePlayersY/value') 
-        lstAwayPlayerX = parsedXML.findall('homePlayersX/value') 
-        lstAwayPlayerY = parsedXML.findall('homePlayersY/value') 
+        lstAwayPlayerX = parsedXML.findall('awayPlayersX/value') 
+        lstAwayPlayerY = parsedXML.findall('awayPlayersY/value') 
     except:
         pass
     
     try:
         lstHomePlayerX = parsedXML.findall('homePlayersX/value') 
         lstHomePlayerY = parsedXML.findall('homePlayersY/value') 
-        lstAwayPlayerX = parsedXML.findall('homePlayersX/value') 
-        lstAwayPlayerY = parsedXML.findall('homePlayersY/value') 
+        lstAwayPlayerX = parsedXML.findall('awayPlayersX/value') 
+        lstAwayPlayerY = parsedXML.findall('awayPlayersY/value') 
     except:
         pass
     
