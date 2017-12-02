@@ -14,8 +14,8 @@ import string
 from dateutil.parser import parse
 
 #Player files to work with
-matchFileDirectory = '/Users/hugomathien/Documents/workspace/footballdata/matches/'
-db = '/Users/hugomathien/Documents/workspace/footballdata/database/Football (Soccer) Database.sqlite'
+matchFileDirectory = '/home/knut/code/git/python-football-data-collection/footballData/matches/'
+db = '/home/knut/code/git/python-football-data-collection/footballData/db/SoccerDatabase.sqlite'
 errorFile = '/Users/hugomathien/Documents/workspace/footballdata/match_error.txt'
 startIntFifa = 154994
 startDateFifa = datetime(2007,2,22)
