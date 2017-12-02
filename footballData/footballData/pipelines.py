@@ -6,6 +6,7 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import json
+import errno
 import os
 import collections
 from scrapy import signals
@@ -23,27 +24,31 @@ class XmlExportPipeline(object):
 
     def __init__(self):
         self.files = {}
+        self.exporter = {}
 
     @classmethod
     def from_crawler(cls, crawler):
-         pipeline = cls()
-         crawler.signals.connect(pipeline.spider_opened, signals.spider_opened)
-         crawler.signals.connect(pipeline.spider_closed, signals.spider_closed)
-         return pipeline
+        '''Receives data from the crawler, creates the pipeline'''
+        pipeline = cls()
+        crawler.signals.connect(pipeline.spider_opened, signals.spider_opened)
+        crawler.signals.connect(pipeline.spider_closed, signals.spider_closed)
+        return pipeline
 
     def spider_opened(self, spider):
-        file = open('%s.xml' % spider.name, 'w+b')
-        self.files[spider] = file
+        '''Open XML file for writing'''
+        outfile = open('%s.xml' % spider.name, 'w+b')
+        self.files[spider] = outfile
         self.exporter = XmlItemExporter(file)
         self.exporter.start_exporting()
-        pass
-    
+
     def spider_closed(self, spider):
+        '''Close the spider'''
         self.exporter.finish_exporting()
-        file = self.files.pop(spider)
-        file.close()
+        outfile = self.files.pop(spider)
+        outfile.close()
 
     def process_item(self, item, spider):
+        '''Actually processes the xml file content'''
         if spider.name is 'match':
             filename = 'matches/' \
             + item['country'] \
