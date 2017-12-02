@@ -7,8 +7,8 @@ import os
 import xml.etree.ElementTree as ET
 import collections 
 
-playersListDirectory = '/Users/hugomathien/Documents/workspace/footballdata/players_list/'
-matchDirectory = '/Users/hugomathien/Documents/workspace/footballdata/matches/'
+playersListDirectory = '/home/knut/code/git/python-football-data-collection/footballData/players_list/'
+matchDirectory = '/home/knut/code/git/python-football-data-collection/footballData/matches/'
 count = 0
 playersDict = collections.OrderedDict()
 print "Player extract started..."
