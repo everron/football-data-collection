@@ -113,7 +113,7 @@ for (dirname, dirs, files) in os.walk(matchDirectory):
 
                                 i += 1
                                 startIntFifa = 154994
-                                startDateFifa = datetime(2007,2,22)
+                                startDateFifa = datetime(2016,5,26)
                                 delta = int(node) - startIntFifa
                                 datePlayerStatUpdate = startDateFifa + timedelta(days=delta)
                                 if matchDate > datePlayerStatUpdate:

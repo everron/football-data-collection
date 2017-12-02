@@ -18,7 +18,7 @@ playersFileDirectory = '/home/knut/code/git/python-football-data-collection/foot
 db = '/home/knut/code/git/python-football-data-collection/footballData/data/db/SoccerDB.sqlite'
 errorFile = '/home/knut/code/git/python-football-data-collection/footballData/data/error.txt'
 startIntFifa = 154994
-startDateFifa = datetime(2007,2,22)
+startDateFifa = datetime(2016,5,26)
 conn = sqlite3.connect(db)
 cur = conn.cursor()
 
@@ -92,7 +92,7 @@ longStatsField = ['Crossing',
 
 def printError(player_name,player_api_id,player_fifa_id,):
     outputFile = open(errorFile,'a')
-    url = 'http://sofifa.com/player/' + str(player_fifa_id)
+    url = 'https://sofifa.com/player/' + str(player_fifa_id)
     outputFile.write(str(player_api_id) + ',' + player_name + ',' + url + '\n')  
             
 def savePlayer(filename,count):
