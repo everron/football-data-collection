@@ -1,3 +1,10 @@
+**knbknb 20171202:**
+
+ - original repo: https://github.com/hugomathien/football-data-collection
+ - modified in 2017 by github user sovello, https://github.com/sovello/football-data-collection , forked from there
+
+---------------------------------
+
 # Collecting football data
 ## Welcome !
 This is an open source project aiming to provide tools for people to collect and format large set of data about football matches and players. The project is essentially a crawler written in Python and relies on two sources:
