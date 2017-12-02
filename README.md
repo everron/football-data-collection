@@ -22,13 +22,22 @@ To run these script, you must:
   google-api-python-client`
 * install the json-rpc extension for scrapy: `pip install scrapy-jsonrpc`
 
-* edit `matchcrawler.py` and change these lines of code: <code> countries =
-  ['England']
+* edit `matchcrawler.py` and change these lines of code: 
 
-  seasons = ['2009/2010', '2010/2011', '2011/2012', '2012/2013',
-  '2013/2014','2014/2015', '2015/2016', '2016/2017', '2017/2018'] </code>
+  ```
+  countries = ['England']
+  
+  seasons = ['2009/2010', '2010/2011', '2011/2012', '2012/2013', '2013/2014','2014/2015', '2015/2016', '2016/2017', '2017/2018']
 
-Then run `scrapy crawl match` from the command line
+  ```
+
+...to anything that you prefer.
+
+
+Then run `scrapy crawl match` from the command line.
+
+
+The 'England' scrape in the codeblock above takes about 1 hour.
 
 ---
 
