@@ -18,11 +18,11 @@ import math
 from operator import truediv
 
 #Player stat files
-players_directory = '/home/knut/code/git/python-football-data-collection/footballData/players/'
+players_directory = '/home/knut/code/git/python-football-data-collection/footballData/data/players/'
 #Match with embedded stats 
-match_directory = '/home/knut/code/git/python-football-data-collection/footballData/matches_with_stats/'
+match_directory = '/home/knut/code/git/python-football-data-collection/footballData/data/matches_with_stats/'
 #Where to write the learning file
-output_directory = '/home/knut/code/git/python-football-data-collection/footballData/learning_vector/'
+output_directory = '/home/knut/code/git/python-football-data-collection/footballData/data/learning_vector/'
 #Name of the learning file
 ts = time.time()
 runTime = datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')

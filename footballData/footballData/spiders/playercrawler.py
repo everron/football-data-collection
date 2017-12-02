@@ -28,8 +28,8 @@ class PlayerSpider(scrapy.Spider):
     birthYearCheck = False
     countryCheck = False
     parseLastNameOnly = False
-    playerFilePath = '/Users/hugomathien/Documents/workspace/footballData/players_list/1_players_list_all.txt'
-    playerErrorFile = '/Users/hugomathien/Documents/workspace/footballData/players_list/fail.txt'
+    playerFilePath = '/home/knut/code/git/python-football-data-collection/footballData/data/players_list/1_players_list_all.txt'
+    playerErrorFile = '/home/knut/code/git/python-football-data-collection/footballData/data/players_list/fail.txt'
     baseUrlSoFifa = 'http://sofifa.com/players?keyword='
     baseUrlLiveScore = 'http://football-data.mx-api.enetscores.com/page/xhr/player/'
     fifaLatestRelease=16
@@ -443,7 +443,7 @@ class PlayerSpider(scrapy.Spider):
             yield player
             
             print 'Exported ' + name + ',' + matchId + ',' + fifaId
-            filename = '/Users/hugomathien/Documents/workspace/footballData/players_list/2_export_list.txt'
+            filename = '/home/knut/code/git/python-football-data-collection/footballData/data/players_list/2_export_list.txt'
             file = open(filename, 'a')
             file.write(name + ',' + matchId + ',' + fifaId + '\n')
         except:

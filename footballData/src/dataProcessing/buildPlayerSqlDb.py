@@ -14,9 +14,9 @@ import string
 from dateutil.parser import parse
 
 #Player files to work with
-playersFileDirectory = '/home/knut/code/git/python-football-data-collection/footballData/players/'
-db = '/home/knut/code/git/python-football-data-collection/footballData/db/SoccerDB.sqlite'
-errorFile = '/home/knut/code/git/python-football-data-collection/footballData/error.txt'
+playersFileDirectory = '/home/knut/code/git/python-football-data-collection/footballData/data/players/'
+db = '/home/knut/code/git/python-football-data-collection/footballData/data/db/SoccerDB.sqlite'
+errorFile = '/home/knut/code/git/python-football-data-collection/footballData/data/error.txt'
 startIntFifa = 154994
 startDateFifa = datetime(2007,2,22)
 conn = sqlite3.connect(db)
