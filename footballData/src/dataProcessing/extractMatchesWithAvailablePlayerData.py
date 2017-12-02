@@ -19,13 +19,13 @@ import sys
 # ---- PARAMETERS ----
 # --------------------
 #List of players to work with
-playersListDirectory = '/Users/hugomathien/Documents/workspace/footballdata/players_list/'
+playersListDirectory = '/home/knut/code/git/python-football-data-collection/footballData/players_list/'
 #Matches to work with
-matchDirectory = '/Users/hugomathien/Documents/workspace/footballdata/matches/'
+matchDirectory = '/home/knut/code/git/python-football-data-collection/footballData//matches/'
 #Player files to work with
-playersFileDirectory = '/Users/hugomathien/Documents/workspace/footballdata/players/'
+playersFileDirectory = '/home/knut/code/git/python-football-data-collection/footballData/players/'
 #Where to output the match files with embedded statistics
-output = '/Users/hugomathien/Documents/workspace/footballdata/matches_with_stats/'
+output = '/home/knut/code/git/python-football-data-collection/footballData/matches_with_stats/'
 #Where to output the missing players list
 missingPlayerFileName = 'missingPlayers.txt'
 #How many missing players to output, ordered by their importance (i.e: the number of match they prevent to retrieve)
