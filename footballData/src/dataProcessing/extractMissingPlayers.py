@@ -1,7 +1,7 @@
 '''
 Created on Jul 2, 2016
 
-@author: hugomathien
+@author: knbknb
 '''
 import os
 import re 
