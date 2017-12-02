@@ -3,3 +3,4 @@ matches
 footballData/spiders/__init__.pyc
 footballData/spiders/matchcrawler.pyc
 footballData/spiders/playercrawler.pyc
+matches/Germany/
