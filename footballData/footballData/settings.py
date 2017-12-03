@@ -23,6 +23,7 @@ ROBOTSTXT_OBEY = False
 
 ITEM_PIPELINES = {
     'footballData.pipelines.XmlExportPipeline': 1000,
+    'footballData.pipelines.JsonWriterPipeline': 800,
 }
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)

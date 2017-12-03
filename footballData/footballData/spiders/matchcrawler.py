@@ -10,7 +10,7 @@ class MatchSpider(scrapy.Spider):
     start_urls = [
     "http://football-data.mx-api.enetscores.com/page/xhr/standings/"
     ]
-    countries = ['Germany']
+    countries = ['Italy', 'France', 'Spain', 'Turkey', 'Belgium', 'Netherlands', 'Austria', 'Poland', 'Portugal', 'Scotland', 'Switzerland']
     seasons = ['2009/2010', '2010/2011', '2011/2012', '2012/2013', '2013/2014','2014/2015', '2015/2016', '2016/2017', '2017/2018']
     stages = []
     matches = []
@@ -175,7 +175,7 @@ class MatchSpider(scrapy.Spider):
             foulcommit = [s for s in jsonresponse["i"] if s['type']=='foulcommit']
             card = [s for s in jsonresponse["i"] if s['type']=='card']
             corner = [s for s in jsonresponse["i"] if s['type']=='corner']
-            subtypes = [s for s in jsonresponse["i"] if 'subtype' in s]
+            #subtypes = [s for s in jsonresponse["i"] if 'subtype' in s]
             cross = [s for s in subtypes if s['subtype']=='cross']
             possession = [s for s in subtypes if s['subtype']=='possession']
             
@@ -184,11 +184,12 @@ class MatchSpider(scrapy.Spider):
             match['shotoff'] = shotoff
             match['foulcommit'] = foulcommit
             match['card'] = card
-            match['cross'] = cross
             match['corner'] = corner
+            # TODO subtypes (what are subtypes?)
+            match['cross'] = cross
             match['possession'] = possession
         except:
             e = sys.exc_info()[0]
-            print 'No Match Events: ' + str(e)
+            print response.url + ' No Match Events: ' + str(e)
            
         yield match

@@ -4,9 +4,42 @@
 * modified in 2017 by github user sovello,
   https://github.com/sovello/football-data-collection , forked from there
 
-## How to use:
+### How to use (notes to myself):
 
-See my [instructions](How-to-use.md)
+This repository does _not_ contain any data, just the python scripts that scrape
+the data from public websites.
+
+The software used to download from the internet, _scrapy_, is free software.
+However, the version used to compile this dataset in 2016 has been rewritten by
+the community. Now the minimal documentation given here is not sufficient, and
+the source code comments are misleading (because they point to old
+documentation)
+
+To run these script, you must:
+
+* install scrapy and its dependencies: `pip install scrapy`
+* install the google-web-api-client: `pip install --upgrade
+  google-api-python-client`
+* install the json-rpc extension for scrapy: `pip install scrapy-jsonrpc`
+
+* edit `matchcrawler.py` and change these lines of code: 
+
+  ```
+  countries = ['England']
+  
+  seasons = ['2009/2010', '2010/2011', '2011/2012', '2012/2013', '2013/2014','2014/2015', '2015/2016', '2016/2017', '2017/2018']
+
+  ```
+
+...to anything that you prefer.
+
+
+Then run `scrapy crawl match` from the command line.
+
+
+The 'England' scrape in the codeblock above takes about 1 hour.
+
+---
 
 # Collecting football data
 

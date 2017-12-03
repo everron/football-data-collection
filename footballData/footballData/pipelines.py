@@ -16,6 +16,7 @@ class JsonWriterPipeline(object):
     def __init__(self):
         self.file = open('items.json', 'wb')
     def process_item(self, item, spider): 
+        '''Append JSON data from crawled website to a JSON File'''
         line = json.dumps(dict(item)) + "\n" 
         self.file.write(line)
         return item
@@ -28,7 +29,7 @@ class XmlExportPipeline(object):
 
     @classmethod
     def from_crawler(cls, crawler):
-        '''Receives data from the crawler, creates the pipeline'''
+        '''Receives data from the crawler engine, creates the output pipelines'''
         pipeline = cls()
         crawler.signals.connect(pipeline.spider_opened, signals.spider_opened)
         crawler.signals.connect(pipeline.spider_closed, signals.spider_closed)
