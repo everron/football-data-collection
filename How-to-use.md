@@ -6,23 +6,33 @@
 
 ### How to use (notes to myself):
 
-This repository does _not_ contain any data, just the python scripts that scrape
-the data from public websites.
+**This page augments and complements the [README.md](README.md) file provided by
+the original author(s) of this repository.**
 
-The software used to download from the internet, _scrapy_, is free software.
-However, the version used to compile this dataset in 2016 has been rewritten by
-the community. Now the minimal documentation given here is not sufficient, and
-the source code comments are misleading (because they point to old
-documentation)
+* This repository does _not_ contain any data, just the python scripts that
+  scrape the data from public websites.
 
-To run these scripts, you must:
+The software used to download data from the internet, _scrapy_, is free
+software. However, since 2017, the scrapy version used to compile this dataset
+in mid-2016 is no longer avaliable. You can still install scrapy, but whenthere
+are backward compatibility issues. Scrapy been changed and rewritten by the
+Python community.
+
+I've also discovered that the sparse documentation (given in this repo) on how
+to configure the scrapy software is not sufficient, and the source code comments
+are misleading (because they point to old, outdated documentation)
+
+So here are some extra instructions:
+
+To run these webcrawler scripts, you must:
 
 * install scrapy and its dependencies: `pip install scrapy`
 * install the google-web-api-client: `pip install --upgrade
   google-api-python-client`
 * install the json-rpc extension for scrapy: `pip install scrapy-jsonrpc`
 
-* edit `matchcrawler.py` and change these lines of code:
+* edit `matchcrawler.py` and change these lines of code at the beginning of the
+  file:
 
   ```
   countries = ['England']
