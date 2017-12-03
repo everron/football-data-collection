@@ -10,6 +10,7 @@ class MatchSpider(scrapy.Spider):
     start_urls = [
     "http://football-data.mx-api.enetscores.com/page/xhr/standings/"
     ]
+    # 'Czech Repulic', 'Denmark', 'Greece'
     countries = ['Italy', 'France', 'Spain', 'Turkey', 'Belgium', 'Netherlands', 'Austria', 'Poland', 'Portugal', 'Scotland', 'Switzerland']
     seasons = ['2009/2010', '2010/2011', '2011/2012', '2012/2013', '2013/2014','2014/2015', '2015/2016', '2016/2017', '2017/2018']
     stages = []
